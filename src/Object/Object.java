@@ -1,3 +1,5 @@
+package Object;
+
 public abstract class Object {
     public String name;
 

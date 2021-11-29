@@ -1,3 +1,5 @@
+package Object;
+
 public class Sweets extends Object{
     public int count;
 

@@ -1,5 +1,10 @@
+package Guys;
+import Interfaces.BoxMoves;
+import Interfaces.SweetsMoves;
+import Object.*;
+
 import java.util.Random;
-public class Kirre extends Guys implements ObjectMoves{
+public class Kirre extends Guys implements BoxMoves, SweetsMoves {
     public Kirre(){
         super("Kirre");
     }
@@ -13,6 +18,9 @@ public class Kirre extends Guys implements ObjectMoves{
     public void giveBox(Box box,Guys guy){
         System.out.println("Kirre gave a " + box.getName() + " to " + guy.getName() + ", but managed to put " + (new Random().nextInt(5)) + " candy in his mouth");
     }
+
+    @Override
+    public void fillBox(Box box, Sweets sweets){}
 
     @Override
     public void countCandy(Sweets sweets){

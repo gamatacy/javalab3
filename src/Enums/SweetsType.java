@@ -1,4 +1,6 @@
+package Enums;
 import java.util.Random;
+
 public enum SweetsType {
     Cow,
     KitKat,

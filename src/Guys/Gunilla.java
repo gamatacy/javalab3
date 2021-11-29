@@ -1,4 +1,9 @@
-public class Gunilla extends Guys implements ObjectMoves{
+package Guys;
+import Interfaces.BoxMoves;
+import Interfaces.SweetsMoves;
+import Object.*;
+
+public class Gunilla extends Guys implements BoxMoves, SweetsMoves {
     public Gunilla(){
         super("Gunilla");
     }
@@ -12,6 +17,9 @@ public class Gunilla extends Guys implements ObjectMoves{
     public void giveBox(Box box,Guys guy){
         System.out.println("Gunilla gave a " + box.getName() + " to " + guy.getName());
     }
+
+    @Override
+    public void fillBox(Box box, Sweets sweets){}
 
     @Override
     public void countCandy(Sweets sweets){

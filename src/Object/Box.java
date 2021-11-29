@@ -1,3 +1,5 @@
+package Object;
+
 public class Box extends Object {
     public int capacity;
 
