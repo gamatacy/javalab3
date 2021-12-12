@@ -8,14 +8,15 @@ public class Main {
         Kirre kirre = new Kirre();
         Karlson karlson = new Karlson();
         Gunilla gunilla = new Gunilla();
-        Sweets sweets = new Sweets(15, SweetsType.getType().name());
-        Box candyBox = new Box(10, "CandyBox");
-        Box kulek = new Box(10, "Kulek");
+        Sweets sweets = new Sweets(1, SweetsType.getType().name());
+        Box candyBox = new Box( "Enter Box");
+        Box kulek = new Box( "Kulek",6);
+        OtherGuys otherGuys = new OtherGuys(5);
+        karlson.getCandyStatus();
         kirre.giveBox(kulek,karlson);
         karlson.getBox(kulek);
-        gunilla.giveBox(candyBox, karlson);
-        karlson.getBox(candyBox);
-        karlson.fillBox(candyBox, sweets);
-        karlson.countCandy(sweets);
+        gunilla.collectCandies(candyBox, otherGuys);
+        karlson.greedyCount(sweets);
+        karlson.getCandyStatus();
     }
 }

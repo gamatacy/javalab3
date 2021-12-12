@@ -1,4 +1,5 @@
 package Guys;
+import Object.*;
 public abstract class Guys {
     public String name;
 
@@ -14,4 +15,8 @@ public abstract class Guys {
         return this.name;
     }
 
+    public abstract void getBox(Box box);
+
+    public abstract void giveBox(Box box, Guys guy);
+    public abstract void fillBox(Sweets sweets, Box box);
 }

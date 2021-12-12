@@ -1,9 +1,13 @@
 package Object;
 
 public class Box extends Object {
-    public int capacity;
+    public int capacity = 0;
 
-    public Box(int capacity, String name){
+    public Box(String name){
+        super(name);
+    }
+
+    public Box(String name, int count){
         super(name);
         this.capacity = capacity;
     }
@@ -12,4 +16,7 @@ public class Box extends Object {
         return this.capacity;
     }
 
+    public void loadBox(int count){
+        this.capacity += count;
+    }
 }

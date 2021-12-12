@@ -1,16 +1,26 @@
 package Guys;
-import Interfaces.BoxMoves;
-import Interfaces.SweetsMoves;
+import Enums.SweetsType;
 import Object.*;
+import Interfaces.enterCandies;
+import java.util.Random;
 
-public class Gunilla extends Guys implements BoxMoves, SweetsMoves {
+public class Gunilla extends Guys implements enterCandies{
     public Gunilla(){
         super("Gunilla");
     }
 
     @Override
+    public void collectCandies(Box box, Guys guys){
+        int count = new Random().nextInt(3);
+        System.out.println("Gunilla collects candies in " + box.getName() + "\n");
+        guys.fillBox(new Sweets(1, SweetsType.getType().name()),box);
+        System.out.println("\n");
+        box.loadBox(count);
+    }
+
+    @Override
     public void getBox(Box box){
-        System.out.println("Gunilla took a " + box.getName());
+        System.out.println("Gunilla tooks a " + box.getName());
     }
 
     @Override
@@ -19,10 +29,15 @@ public class Gunilla extends Guys implements BoxMoves, SweetsMoves {
     }
 
     @Override
-    public void fillBox(Box box, Sweets sweets){}
+    public void fillBox(Sweets sweets, Box box){
+        System.out.println("Gunilla puts " + sweets.getName() +" in the " + box.getName());
+    }
 
+}
+/*
     @Override
     public void countCandy(Sweets sweets){
         System.out.println("Gunilla counting sweets, there are " + sweets.getCount() + " " + sweets.getName());
     }
-}
+
+ */
